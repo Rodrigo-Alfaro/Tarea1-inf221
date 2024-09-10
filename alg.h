@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 #include <chrono>
 using namespace std;
-#define BUFF 1024;
 
 //sorting alg for vectors
-
 void selection_sort(vector<int> &data);
 void cpp_sort(vector<int> &data);
 void mergesort(vector<int> &data, int l, int r);

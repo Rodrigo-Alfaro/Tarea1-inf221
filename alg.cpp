@@ -1,8 +1,6 @@
 #include "alg.h"
 using namespace std;
 
-#define N 512;
-
 //sorting alg for vectors
 
 void selection_sort(vector<int> &data) {
@@ -11,7 +9,7 @@ void selection_sort(vector<int> &data) {
     for(int i = 0; i < n - 1; i++) {
         int min_index = i;
         for (int j = i + 1; j < n; j++) {
-            if (data[j] < data[min_index]) { // Find min element
+            if (data[j] < data[min_index]) { // find min element
                 min_index = j;
             }
         }
@@ -21,7 +19,6 @@ void selection_sort(vector<int> &data) {
         }
     }
 }
-
 
 void cpp_sort(vector<int> &data){
     sort(data.begin(), data.end());
@@ -64,10 +61,9 @@ void mergesort(vector<int> &data, int l, int r){
     int mid = l + (r - l) / 2;
 
     mergesort(data, l, mid);
-    mergesort(data, mid + 1, r);
+    mergesort(data, mid + 1, r); 
     
     merge(data, l, mid, r); //print out func for simplicity
-
 }
 
 int partition(vector<int> &data, int l, int h){
@@ -103,7 +99,7 @@ vector<vector<int>> iter_trad(const vector<vector<int>> &a, const vector<vector<
     int colsB = b[0].size();
 
     if (colsA != rowsB) {
-        throw runtime_error("Matrix dimensions are not compatible for multiplication");
+        throw runtime_error("Matrix dimensions are not compatible for multiplication"); //error for non squared matrix
     }
 
     vector<vector<int>> res(rowsA, vector<int>(colsB, 0));
@@ -229,8 +225,7 @@ vector<vector<int>> strassen(const vector<vector<int>> &a, const vector<vector<i
     return res;
 }
 
-
-
+//aux funcs
 
 void print_matrix(const vector<vector<int>>& data){
     for (const auto& row : data){
@@ -288,86 +283,4 @@ void sort_percent(vector<int> &data, double percent){
 
     copy(top.begin(), top.end(), data.end() - n_sort);
 }
-
-
-/*int main(){
-
-    string small_path = "small_numbers.csv";
-    string medium_path = "medium_numbers.csv";
-    string large_path = "large_numbers.csv";
-
-    vector<int> small = csv2_vector(small_path);
-    vector<int> medium = csv2_vector(medium_path);
-    vector<int> large = csv2_vector(large_path);
-
-    vector<int> small_ss = small, small_cpp = small, small_ms = small, small_qs = small;
-
-    //small dataset
-    chrono::steady_clock::time_point begin = chrono::steady_clock::now();
-    selection_sort(small_ss);
-    chrono::steady_clock::time_point end = chrono::steady_clock::now();
-    auto timer_small_ss = chrono::duration_cast<chrono::milliseconds>(end - begin).count();
-
-    begin = chrono::steady_clock::now();
-    selection_sort(small_cpp);
-    end = chrono::steady_clock::now();
-    auto timer_small_cpp = chrono::duration_cast<chrono::milliseconds>(end - begin).count();
-    
-    begin = chrono::steady_clock::now();
-    selection_sort(small_ms);
-    end = chrono::steady_clock::now();
-    auto timer_small_ms = chrono::duration_cast<chrono::milliseconds>(end - begin).count();
-
-    begin = chrono::steady_clock::now();
-    selection_sort(small_qs);
-    end = chrono::steady_clock::now();
-    auto timer_small_qs = chrono::duration_cast<chrono::milliseconds>(end - begin).count();
-
-
-
-
-    /*vector<vector<int>> A = {
-        {1, 2},
-        {4, 5},
-        
-    };
-
-    vector<vector<int>> B = {
-        {9, 8},
-        {6, 5},
-        
-    };
-
-    auto test = strassen(A, B);
-    print_matrix(test);
-    cout<<"------------------------"<<endl;
-    iter_trad(A, B);*/
-
-
-    //iter_transp(A, transp_matrix(B));
-    /*vector<int> las = {
-    12, 56, 34, 5
-};
-    //mergesort(las, 0, las.size() - 1);
-    quicksort(las, 0, las.size() - 1);
-    cout << "asdasdasdasd: " << timaer << endl;
-    for (int n : las) cout << n << endl;
-*/
-//24101000
-//2001000
-
-
-    //cout << "Time difference = " << std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count() << "[ns]" << std::endl;
-  //  return 0;*/
-//}
-//***C++11 Style:***
-//#include <chrono>
-//
-//std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-//std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-//
-//std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << "[µs]" << std::endl;
-//std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count() << "[ns]" << std::endl;
-
-
 
