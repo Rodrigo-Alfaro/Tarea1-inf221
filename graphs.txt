@@ -1,0 +1,90 @@
+------------------------------------------------------------------------------
+Normal Dataset Benchmark
+------------------------------------------------------------------------------
+        Small Dataset Benchmark [nanoseconds]:
+Selection Sort: 26600
+C++ Sort: 15400
+Merge Sort: 42100
+Quicksort: 10000
+------------------------------------------------------------------------------
+        Medium Dataset Benchmark [ms]:
+Selection Sort: 201
+C++ Sort: 2
+Merge Sort: 6
+Quicksort: 2
+------------------------------------------------------------------------------
+        Large Dataset Benchmark [ms]:
+Selection Sort: 0
+C++ Sort: 348
+Merge Sort: 663
+Quicksort: 287
+------------------------------------------------------------------------------
+50% Sorted Benchmark
+------------------------------------------------------------------------------
+        Small Dataset Benchmark [nanoseconds]:
+Selection Sort: 20700
+C++ Sort: 7600
+Merge Sort: 38400
+Quicksort: 63000
+------------------------------------------------------------------------------
+        Medium Dataset Benchmark [ms]:
+Selection Sort: 202
+C++ Sort: 1
+Merge Sort: 4
+Quicksort: 623
+------------------------------------------------------------------------------
+        Large Dataset Benchmark [ms]:
+Selection Sort: 0
+C++ Sort: 202
+Merge Sort: 520
+Quicksort: 0
+------------------------------------------------------------------------------
+80% Sorted Benchmark
+------------------------------------------------------------------------------
+        Small Dataset Benchmark [nanoseconds]:
+Selection Sort: 20200
+C++ Sort: 7400
+Merge Sort: 37200
+Quicksort: 151100
+------------------------------------------------------------------------------
+        Medium Dataset Benchmark [ms]:
+Selection Sort: 199
+C++ Sort: 1
+Merge Sort: 4
+Quicksort: 613
+------------------------------------------------------------------------------
+        Large Dataset Benchmark [ms]:
+Selection Sort: 0
+C++ Sort: 196
+Merge Sort: 516
+Quicksort: 0
+------------------------------------------------------------------------------
+        Square matrix
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+        Square Matrix (n = 2**6) Benchmark[miliseconds]
+Iterativo Cubico Tradicional: 2
+Iterativo Cubico Transpuesto: 2
+Strassen: 325
+------------------------------------------------------------------------------
+        Square Matrix (n = 2**7) Benchmark[miliseconds]
+Iterativo Cubico Tradicional: 26
+Iterativo Cubico Transpuesto: 31
+Strassen: 2305
+------------------------------------------------------------------------------
+        Square Matrix (n = 2**10) Benchmark[miliseconds]
+Iterativo Cubico Tradicional: 15843
+Iterativo Cubico Transpuesto: 11777
+Strassen: 0
+------------------------------------------------------------------------------
+        Different dimension matrix
+------------------------------------------------------------------------------
+Matrix (64x128 * 128*64) Benchmark[miliseconds]
+Iterativo Tradicional: 7
+Iterativo Transpuesto: 4
+Strassen: 326
+------------------------------------------------------------------------------
+Matrix (256x512 * 512*256) Benchmark[miliseconds]
+Iterativo Tradicional: 407
+Iterativo Transpuesto: 182
+Strassen: 0
